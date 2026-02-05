@@ -6,22 +6,31 @@ public class RemoveCatsForwardBug {
         // remove all "cat" in the arrayList.
 
         // Step 0: initialize an ArrayList ["cat", "cat", "dog", "cat", "cat", "fish"]
-        
+        ArrayList<String> ArrayList = new ArrayList<String>();
+        ArrayList.add("cat");
+        ArrayList.add("cat");
+        ArrayList.add("dog");
+        ArrayList.add("cat");
+        ArrayList.add("cat");
+        ArrayList.add("fish");
+
 
         // Step 1: This is the overall structure of a for loop you need:
         // Replace all the underscore with correct number/variable names
-        for (int i = __; i < ____.size(); i++) {
+        for (int i = 0; i < ArrayList.size(); i++) {
             
             // Step 2: How do you compare if each element is the same thing as "cat"?
             // Remember, you are comparing Strings!
-            if () {
+            if ("cat".equals(ArrayList.get(i))) {
                 
                 // Step 3: inside this if statement, you need to do what?
                 // How do you remove something from an array?
+                ArrayList.remove(i);
+                i--;
             }
         }
 
         // Step 4: Print the array to see what it looks like
-        System.out.println("Buggy result: " + ____);
+        System.out.println("Buggy result: " + ArrayList);
     }
 }
